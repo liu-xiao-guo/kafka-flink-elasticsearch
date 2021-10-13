@@ -28,10 +28,6 @@ public class KafkaElasticsearch {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         // Configure kafka parameters
-        Properties properties = new Properties();
-        properties.setProperty("bootstrap.servers", "localhost:9092");
-        properties.setProperty("zookeeper.connect", "localhost:2181");
-        properties.setProperty("group.id", "test-group");
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         // 设置检查点时间间隔
         env.enableCheckpointing(5000);
